@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start-pwa": "ng build && -p 8080 -c-1 dist/angular-pwa",
+    "start-pwa": "ng build && dist/Angular-Material-Data-Table-Paging-Sorting-Filtering-master",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",

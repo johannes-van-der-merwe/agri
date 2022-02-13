@@ -6,9 +6,14 @@
 - repair combo filter
 - wait 2s for data after keypress
 
+  ng build
+  npm i -g http-server
+  npm run start-pwa
+
 - PWA
   - command: `npm run start-pwa`
 - CSS
 - MOBILE 
 - COMMENTS 
 - optional - Live Deployment
+
