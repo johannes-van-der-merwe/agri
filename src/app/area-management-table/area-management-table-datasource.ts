@@ -1,14 +1,16 @@
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-// import { MatSelectModule } from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+
+import { MatTableDataSource } from '@angular/material/table';
 
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 import jsonData from '../../assets/data/blocks.json';
 import { MatListModule } from '@angular/material/list/list-module';
-// import { OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // REVIEW / | undefined
 export interface AreaManagementTableItem {
@@ -23,28 +25,27 @@ export interface AreaManagementTableItem {
 
 const AREA_MANAGEMENT_DATA: AreaManagementTableItem[] = jsonData;
 
+@Component({
+  template: ''
+})
 /**
  * Data source for the AreaManagementTable view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class AreaManagementTableDataSource extends DataSource<AreaManagementTableItem>
-// implements OnInit 
-{
+export class AreaManagementTableDataSource extends DataSource<AreaManagementTableItem> implements OnInit {
   data: AreaManagementTableItem[] = AREA_MANAGEMENT_DATA;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
-
   list: MatListModule | undefined;
-
+  // FarmFilter: String | undefined;
+  // filter: filter | undefined;
   constructor() {
     super();
   }
-
-  // ngOnInit() {
-
-  //   // this.dataSource.sort = this.matSort;
-  // }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   /**
    * Connect this data source to the table. The table will only update when
@@ -54,21 +55,13 @@ export class AreaManagementTableDataSource extends DataSource<AreaManagementTabl
 
   connect(): Observable<AreaManagementTableItem[]> {
     if (this.paginator && this.sort) {
-      // this.data.map((element) => {
-      //   // console.log(element.farmName)
-      //   return this.getFilterSelectorData(this.list.);
-      // });
-
-
-
-
       // Combine everything that affects the rendered data into one update
       // stream for the data-table to consume.
 
+      // NOTE PAGINATION
       return merge(observableOf(this.data), this.paginator.page, this.sort.sortChange).pipe(map(() =>
         this.getPagedData(this.getSortedData([...this.data])
         )));
-
     } else {
       throw Error('Please set the paginator and sort on the data source before connecting.');
     }
@@ -92,7 +85,6 @@ export class AreaManagementTableDataSource extends DataSource<AreaManagementTabl
       return data;
     }
   }
-
   /**
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
