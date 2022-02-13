@@ -14,7 +14,6 @@ export class AreaManagementTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<AreaManagementTableItem>;
-  // @ViewChild(filter) filter!: MatTable<AreaManagementTableItem>;
   dataSource: AreaManagementTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
@@ -57,13 +56,7 @@ export class AreaManagementTableComponent implements AfterViewInit {
         return;
       }
     });
-
     this.table.dataSource = filteredData;
-
-    // filteredData;
-    // this.table.dataSource = filteredData;
-    // let newArray = _.intersection(variant, name);
-    // console.log(newArray);
   }
 
   toggleSlide(value: any) {

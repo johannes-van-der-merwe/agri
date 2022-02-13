@@ -10,12 +10,14 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { UniquePipe } from './unique.pipe';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AreaManagementTableComponent,
     UniquePipe,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
