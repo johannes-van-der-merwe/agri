@@ -1,11 +1,14 @@
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatListModule } from '@angular/material/list';
+// import { MatSelectModule } from '@angular/material/select';
+
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 import jsonData from '../../assets/data/blocks.json';
+import { MatListModule } from '@angular/material/list/list-module';
+// import { OnInit } from '@angular/core';
 
 // REVIEW / | undefined
 export interface AreaManagementTableItem {
@@ -25,15 +28,23 @@ const AREA_MANAGEMENT_DATA: AreaManagementTableItem[] = jsonData;
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class AreaManagementTableDataSource extends DataSource<AreaManagementTableItem> {
+export class AreaManagementTableDataSource extends DataSource<AreaManagementTableItem>
+// implements OnInit 
+{
   data: AreaManagementTableItem[] = AREA_MANAGEMENT_DATA;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
+
   list: MatListModule | undefined;
 
   constructor() {
     super();
   }
+
+  // ngOnInit() {
+
+  //   // this.dataSource.sort = this.matSort;
+  // }
 
   /**
    * Connect this data source to the table. The table will only update when
@@ -68,18 +79,6 @@ export class AreaManagementTableDataSource extends DataSource<AreaManagementTabl
    * any open connections or free any held resources that were set up during connect.
    */
   disconnect(): void { }
-
-  /**
-   * Paginate the data (client-side). If you're using server-side pagination,
-   * this would be replaced by requesting the appropriate data from the server.
-   */
-  private getFilterSelectorData(data: AreaManagementTableItem[]) {
-    if (this.data) {
-      console.log(this.data);
-    } else {
-      return data;
-    }
-  }
 
   /**
    * Paginate the data (client-side). If you're using server-side pagination,

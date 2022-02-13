@@ -7,18 +7,22 @@ import { AreaManagementTableComponent } from './area-management-table/area-manag
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
+import { UniquePipe } from './unique.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AreaManagementTableComponent,
+    UniquePipe,
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule
 
   ],
   providers: [],

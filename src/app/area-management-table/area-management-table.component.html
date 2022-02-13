@@ -4,6 +4,16 @@
     <a mat-list-item href="..." *ngFor="let link of links"> {{ link }} </a>
  </mat-nav-list> -->
 
+ <!-- TODO DYNAMIC DATA -->
+ <mat-select>
+  <mat-option *ngFor="let dataObj of dataSource.data | unique " [value]="dataObj.farmName" >
+    {{ dataObj.farmName }}
+  </mat-option>
+</mat-select> 
+<!-- <mat-option *ngFor="let option of menuOptions" [value]="option" (click)="selectConfig(option)">
+  <mat-select>HELLO WORLD</mat-select>
+</mat-option> -->
+
   <table mat-table class="full-width-table" matSort aria-label="Elements" >
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef>Status</th>
