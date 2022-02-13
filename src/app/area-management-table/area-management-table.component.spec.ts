@@ -1,8 +1,9 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MatTableModule } from '@angular/material/table';
+import { MatListModule } from '@angular/material/list';
 
 import { AreaManagementTableComponent } from './area-management-table.component';
 
@@ -12,12 +13,13 @@ describe('AreaManagementTableComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AreaManagementTableComponent ],
+      declarations: [AreaManagementTableComponent],
       imports: [
         NoopAnimationsModule,
+        MatTableModule,
         MatPaginatorModule,
         MatSortModule,
-        MatTableModule,
+        MatListModule,
       ]
     }).compileComponents();
   }));

@@ -43,3 +43,6 @@ Thumbs.db
 
 # Angular settings
 .angular
+
+# Backups Folder
+/dev

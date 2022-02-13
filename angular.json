@@ -28,8 +28,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/custom-theme.scss",
-              "src/styles.css"
+              "src/globals.css"
             ],
             "scripts": [],
             "serviceWorker": true,
@@ -99,7 +98,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "src/globals.css"
             ],
             "scripts": []
           }
