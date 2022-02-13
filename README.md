@@ -19,13 +19,31 @@
 
 
 ### Repair PWA 
-[2022-02-13T23:00:17.352Z]  "GET /" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36"
-(node:2416) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
-(Use `node --trace-deprecation ...` to show where the warning was created)
-[2022-02-13T23:00:17.605Z]  "GET /favicon.ico" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36"
-[2022-02-13T23:00:17.608Z]  "GET /favicon.ico" Error (404): "Not found"
-[2022-02-13T23:00:26.199Z]  "GET /manifest.webmanifest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36"
-[2022-02-13T23:00:26.201Z]  "GET /manifest.webmanifest" Error (404): "Not found"
-[2022-02-13T23:01:00.018Z]  "GET /favicon.ico" "ManicTime/4.6.21.1"
-[2022-02-13T23:01:00.019Z]  "GET /favicon.ico" Error (404): "Not found"
-[2022-02-13T23:01:00.218Z]  "GET /" "ManicTime/4.6.21.1"
+repaired
+# AgrigisticsTechnicalAssessment
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
