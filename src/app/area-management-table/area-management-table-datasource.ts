@@ -36,8 +36,6 @@ export class AreaManagementTableDataSource extends DataSource<AreaManagementTabl
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
   list: MatListModule | undefined;
-  // FarmFilter: String | undefined;
-  // filter: filter | undefined;
   constructor() {
     super();
   }
@@ -83,6 +81,7 @@ export class AreaManagementTableDataSource extends DataSource<AreaManagementTabl
       return data;
     }
   }
+
   /**
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.

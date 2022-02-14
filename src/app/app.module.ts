@@ -14,6 +14,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,8 @@ import { environment } from '../environments/environment';
     }),
 
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

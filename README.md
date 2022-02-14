@@ -19,22 +19,14 @@
 - COMMENTS 
 - optional - Live Deployment
 
-
-### Repair PWA 
-repaired
 # AgrigisticsTechnicalAssessment
-
-## Development server
-
+## (option) Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Deployment Server (Only for testing purposes)
+## PWA Server (Only for testing purposes)
 ## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Deploy
-
- ng serve -o --poll=2000
-
- `Serves port 2000`
+Run `ng build`
+<!-- Run `npm run start-pwa` to build the project. The build artifacts will be stored in the `dist/` directory. -->
+## Deploy Temporary PWA
+Run `http-server -p 8080 -c-1 dist/agrigistics-technical-assessment`
+ <!-- ng serve -o --poll=2000 -->

@@ -8,9 +8,17 @@
   transform: translateY(0px) !important;
 }
 
+
+
+.core {
+  margin: 20px;
+  padding: 20;
+}
+
 .card {
   width: 100%;
-  background: var(--blue-grey);
+  /* background: var(--blue-grey); */
+  background: red;
   border-radius: 3px;
 }
 

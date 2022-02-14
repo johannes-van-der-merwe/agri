@@ -75,17 +75,18 @@ body {
 
 .inpt-bound-control-outer {
   box-sizing: inherit;
-  height: 56px;
+  /* height: 56px; */
   position: relative;
   vertical-align: top;
-  padding-top: 24px;
+  /* padding-top: 24px; */
+  /* margin: 20px; */
 }
 
 .inpt-bound-control-inner {
   box-sizing: inherit;
   display: flex;
   position: relative;
-  top: 14px;
+  /* top: 14px; */
 }
 
 .inpt-bound-control-wrapper {

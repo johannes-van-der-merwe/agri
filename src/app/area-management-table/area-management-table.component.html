@@ -1,6 +1,8 @@
 <div class="mat-elevation-z8 complete">
   <!-- NOTE OnChange is depricated -->
   <!-- NOTE DYNAMIC DATA CHECKING ENTIRE OBJECT-->
+  <div class="core">
+
   <div class="card">
     <mat-select (selectionChange)="farmFilterChange($event)" >
       <mat-option *ngFor="let dataObj of dataSource.data | unique" [value]="dataObj.farmName" >
@@ -13,7 +15,7 @@
         <div class="inpt-bound-control-outer">
           <div class="inpt-bound-control-inner">
             <div class="inpt-bound-control-wrapper">
-              <input type="text" (input)="findColumns($event)" class="inpt-bound-control-input" type="text" spellcheck="false" autocomplete="off"/>
+              <input type="input" (input)="findColumns($event)" class="inpt-bound-control-input" type="text" spellcheck="false" autocomplete="off"/>
               <div class="inpt-bound-control-label">Farm</div>
             </div>
             <div class="inpt-bound-control-df-bottom-border"></div>
@@ -24,6 +26,8 @@
   </div>
   
   <mat-slide-toggle (change)="toggleSlide($event)" class="">Removed Blocks</mat-slide-toggle>
+</div>
+
   <table mat-table class="full-width-table" matSort aria-label="Elements">
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef>Status</th>

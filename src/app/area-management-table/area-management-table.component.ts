@@ -42,22 +42,21 @@ export class AreaManagementTableComponent implements AfterViewInit {
   }
 
   findColumns(val: any) {
-    // TODO
-    // let testData = this.table.dataSource;
-    const searchVal = val.target.value;
-    const data = this.dataSource.data;
-    const filteredData: any | null = _.filter(data, function (o) {
-      // console.log(searchVal);
-      console.log(o.variant);
-      if (o.variant!.search(searchVal)) {
-        return o.variant === searchVal;
-        // this.table.dataSource = searchVal;
-        // return o.varient;
-      } else {
-        return;
-      }
-    });
-    this.table.dataSource = filteredData;
+    return;
+    // const searchVal = val.target.value;
+    // const data = this.dataSource.data;
+    // const filteredData: any | null = _.filter(data, function (o) {
+    //   // console.log(searchVal);
+    //   console.log(o.variant);
+    //   if (o.variant!.search(searchVal)) {
+    //     return o.variant === searchVal;
+    //     // this.table.dataSource = searchVal;
+    //     // return o.varient;
+    //   } else {
+    //     return;
+    //   }
+    // });
+    // this.table.dataSource = filteredData;
   }
 
   toggleSlide(value: any) {
