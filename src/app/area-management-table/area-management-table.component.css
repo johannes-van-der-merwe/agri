@@ -8,20 +8,78 @@
   transform: translateY(0px) !important;
 }
 
-
+body {
+  background-color: #F6F6F6;
+}
 
 .core {
-  margin: 20px;
+  margin: 30px;
+  margin: 20px 90px;
   padding: 20;
+  background: white;
+
 }
 
 .card {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
-  /* background: var(--blue-grey); */
-  background: red;
+  height: 100%;
+  margin: auto;
+  background: white;
+  /* background: white; */
   border-radius: 3px;
 }
 
-.complete {
+.small-card {
+  width: 100%;
+  display: flex;
   background-color: var(--secondary-grey);
+}
+
+
+.complete {
+  /* background-color: var(--secondary-grey); */
+}
+
+
+.block {
+  padding: 20px;
+}
+
+
+.w-20 {
+  width: 10%;
+}
+
+.w-60 {
+  width: 80%;
+  text-align: right;
+}
+
+.inpt-bound-control {
+  width: 280px;
+}
+
+.core {
+  background-color: aliceblue;
+}
+
+
+@media only screen and (max-width: 40em) {
+  thead th:not(:first-child) {
+    display: none;
+  }
+
+  td,
+  th {
+    display: block;
+  }
+
+  td[data-th]:before {
+    content: attr(data-th);
+  }
 }
