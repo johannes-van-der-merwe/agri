@@ -1,26 +1,29 @@
-<div class="mat-elevation-z8">
+<div class="mat-elevation-z8 complete">
   <!-- NOTE OnChange is depricated -->
- <!-- NOTE DYNAMIC DATA CHECKING ENTIRE OBJECT-->
-  <mat-select (selectionChange)="farmFilterChange($event)" >
-   <mat-option *ngFor="let dataObj of dataSource.data | unique" [value]="dataObj.farmName" >
-     {{ dataObj.farmName }}
-   </mat-option>
- </mat-select> 
- 
- <div class="contine">
-  <div class="inpt-bound-control" data-bound-control onclick="this.classList.add('active-inpt-bound-control')">
-    <div class="inpt-bound-control-outer">
-      <div class="inpt-bound-control-inner">
-        <div class="inpt-bound-control-wrapper">
-          <input type="text" (input)="findColumns($event)" class="inpt-bound-control-input" type="text" spellcheck="false" autocomplete="off"/>
-          <div class="inpt-bound-control-label">Farm</div>
+  <!-- NOTE DYNAMIC DATA CHECKING ENTIRE OBJECT-->
+  <div class="card">
+    <mat-select (selectionChange)="farmFilterChange($event)" >
+      <mat-option *ngFor="let dataObj of dataSource.data | unique" [value]="dataObj.farmName" >
+        {{ dataObj.farmName }}
+      </mat-option>
+    </mat-select> 
+    
+    <div class="contine">
+      <div class="inpt-bound-control" data-bound-control onclick="this.classList.add('active-inpt-bound-control')">
+        <div class="inpt-bound-control-outer">
+          <div class="inpt-bound-control-inner">
+            <div class="inpt-bound-control-wrapper">
+              <input type="text" (input)="findColumns($event)" class="inpt-bound-control-input" type="text" spellcheck="false" autocomplete="off"/>
+              <div class="inpt-bound-control-label">Farm</div>
+            </div>
+            <div class="inpt-bound-control-df-bottom-border"></div>
+          </div>
         </div>
-        <div class="inpt-bound-control-df-bottom-border"></div>
       </div>
     </div>
   </div>
-</div>
- <mat-slide-toggle (change)="toggleSlide($event)" class="">Removed Blocks</mat-slide-toggle>
+  
+  <mat-slide-toggle (change)="toggleSlide($event)" class="">Removed Blocks</mat-slide-toggle>
   <table mat-table class="full-width-table" matSort aria-label="Elements">
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef>Status</th>
@@ -55,7 +58,7 @@
     <ng-container matColumnDef="createdAt">
       <th mat-header-cell *matHeaderCellDef>Created</th>
       <td mat-cell *matCellDef="let row">{{row.createdAt |  date:'MM/dd/yyyy'}}
-</td>
+      </td>
     </ng-container>
     <ng-container matColumnDef="deletedAt">
       <th mat-header-cell *matHeaderCellDef>Removed</th>
@@ -64,12 +67,12 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
+  
   <mat-paginator #paginator
-      [length]="dataSource?.data?.length"
-      [pageIndex]="0"
-      [pageSize]="10"
-      [pageSizeOptions]="[5, 10, 20, 50]"
-      aria-label="Select page">
-  </mat-paginator>
+  [length]="dataSource?.data?.length"
+  [pageIndex]="0"
+  [pageSize]="10"
+  [pageSizeOptions]="[5, 10, 20, 50]"
+  aria-label="Select page">
+</mat-paginator>
 </div>
