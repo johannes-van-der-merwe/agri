@@ -27,5 +27,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng build`
 <!-- Run `npm run start-pwa` to build the project. The build artifacts will be stored in the `dist/` directory. -->
 ## Deploy Temporary PWA
-Run `http-server -p 8080 -c-1 dist/agrigistics-technical-assessment`
+Run `http-server -p 8080 -c-1 dist/agri
  <!-- ng serve -o --poll=2000 -->
